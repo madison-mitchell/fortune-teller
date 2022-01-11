@@ -39,7 +39,7 @@ function addAPerson() {
         const numOfSiblingsPara = document.createElement('p');
 
 
-        // Favorite Color
+        // Favorite Color - car
         if (faveROYGBIV === 'red') {
             faveROYGBIVPara.innerText = ' \'97 Nissan Altima. Noice.';
         } else if (faveROYGBIV === 'orange') {
@@ -58,7 +58,7 @@ function addAPerson() {
         console.log(faveROYGBIVPara.innerText);
 
 
-        // Age
+        // Age - retirement
         if ((age % 2) === 0) {
             agePara.innerText = ' 20 years.';
         } else {
@@ -68,50 +68,36 @@ function addAPerson() {
 
 
 
-        // Siblings
+        // Siblings - vacation home
         if (numOfSiblings < 0) {
             numOfSiblingsPara.innerText = ' Chernobyl';
-        }
-        else if (numOfSiblings === 0) {
+        } else if (numOfSiblings === 0) {
             numOfSiblingsPara.innerText = ' Santorini.';
-        }
-        else if (numOfSiblings === 1) {
+        } else if (numOfSiblings === 1) {
             numOfSiblingsPara.innerText = ' Portland, OR!';
-        }
-        else if (numOfSiblings === 2) {
+        } else if (numOfSiblings === 2) {
             numOfSiblingsPara.innerText = ' Bahamas!';
-        }
-        else if (numOfSiblings === 3) {
+        } else if (numOfSiblings === 3) {
             numOfSiblingsPara.innerText = ' Brazil!';
-        }
-        else {
+        } else {
             numOfSiblingsPara.innerText = ' Baton Rouge.';
         }
 
-        
-        // Birth Month Number
+
+        // Birth Month Number - bank balance
         if (numOfBirthMonth < 5) {
             numOfBirthMonthPara.innerText = ' $456,951.00';
-        }
-        else if (numOfBirthMonth > 4 && numOfBirthMonth < 9) {
+        } else if (numOfBirthMonth > 4 && numOfBirthMonth < 9) {
             numOfBirthMonthPara.innerText = ' $3.50';
-        } 
-        else {
+        } else {
             numOfBirthMonthPara.innerText = ' BEZOS MONEY!';
         }
 
-        
+
         fortuneInfoSection.appendChild(fortuneInfoPara);
-        // fortuneInfoSection.appendChild(firstNamePara);
-        // fortuneInfoSection.appendChild(lastNamePara);
-        // fortuneInfoSection.appendChild(agePara);
-        // fortuneInfoSection.appendChild(faveROYGBIVPara);
-        // fortuneInfoSection.appendChild(numOfBirthMonthPara);
-        // fortuneInfoSection.appendChild(numOfSiblingsPara);     
-        
         fortuneInfoPara.innerText = 'The fortune for ' + firstName + ' is as follows: You will retire in ' + agePara.innerText + ' You will be driving a ' + faveROYGBIVPara.innerText + ' Your vacation home will be in ' + numOfSiblingsPara.innerText + ' And your bank account will have a balance of ' + numOfBirthMonthPara.innerText;
 
         myFortuneDiv.appendChild(fortuneInfoSection);
-        
+
     });
 }
